@@ -1,3 +1,15 @@
+COMPANY: CODTECH IT SOLUTIONS
+
+NAME: Prashant Singh
+
+INTERN ID: CT06DG3462
+
+DOMAIN: Frontend Web Development
+
+DURATION: 6 WEEKS
+
+MENTOR: Neela Santhosh Kumar
+
 # 📚 E-Learning Platform
 
 This is a fully responsive, interactive E-Learning Platform built using **HTML**, **CSS**, and **JavaScript**. It allows users to browse courses, view lessons, and toggle between dark/light mode.
