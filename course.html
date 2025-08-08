@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Detail</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Course</h1>
+    <a href="index.html">⬅ Back</a>
+  </header>
+
+  <!-- Missing container was here -->
+  <section class="course-details"></section>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const course = urlParams.get("course");
+
+    const courseTitle = document.querySelector("h1");
+    const courseDetails = document.querySelector(".course-details");
+
+    if (course === "webdev") {
+      courseTitle.textContent = "Course: Full Stack Web Development";
+      courseDetails.innerHTML = `
+        <p>This course covers HTML, CSS, JavaScript, backend, and deployment.</p>
+        <ul class="lesson-list">
+          <li><a href="lesson.html?lesson=html">Lesson 1: HTML Basics</a></li>
+          <li><a href="lesson.html?lesson=css">Lesson 2: CSS Styling</a></li>
+        </ul>
+      `;
+    } else if (course === "ai") {
+      courseTitle.textContent = "Course: Introduction to AI";
+      courseDetails.innerHTML = `
+        <p>This course introduces AI concepts, ML models, and Python tools.</p>
+        <ul class="lesson-list">
+          <li><a href="lesson.html?lesson=ml">Lesson 1: What is Machine Learning?</a></li>
+          <li><a href="lesson.html?lesson=python">Lesson 2: Python for AI</a></li>
+        </ul>
+      `;
+    } else {
+      courseTitle.textContent = "Course Not Found";
+      courseDetails.innerHTML = `<p>The course you're looking for doesn't exist.</p>`;
+    }
+  </script>
+</body>
+</html>

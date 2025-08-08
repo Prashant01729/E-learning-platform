@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Lesson</h1>
+    <a href="javascript:history.back()">⬅ Back to Course</a>
+  </header>
+
+  <section class="lesson-video">
+    <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    <div class="progress">
+      <label>Progress:</label>
+      <progress value="50" max="100"></progress>
+    </div>
+  </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const lesson = params.get("lesson");
+    const iframe = document.querySelector("iframe");
+    const heading = document.querySelector("h1");
+
+    if (lesson === "html") {
+      iframe.src = "https://www.youtube.com/embed/dD2EISBDjWM";
+      heading.textContent = "Lesson: HTML Basics";
+    } else if (lesson === "css") {
+      iframe.src = "https://www.youtube.com/embed/1PnVor36_40";
+      heading.textContent = "Lesson: CSS Styling";
+    } else if (lesson === "ml") {
+      iframe.src = "https://www.youtube.com/embed/GwIo3gDZCVQ";
+      heading.textContent = "Lesson: What is Machine Learning?";
+    } else if (lesson === "python") {
+      iframe.src = "https://www.youtube.com/embed/_uQrJ0TkZlc";
+      heading.textContent = "Lesson: Python for AI";
+    } else {
+      heading.textContent = "Lesson Not Found";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  --bg-color: #111;
+  --text-color: #eee;
+}
+
+.site-header {
+  background: #1a73e8;
+  color: white;
+  padding: 1vw 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0.64vw 1.6vw rgba(0,0,0,0.1);
+}
+
+.site-header a {
+  color: white;
+  margin-left: 1.5vw;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  padding: 6.4vw 3.2vw;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3vw;
+  font-weight: 700;        
+  margin-bottom: 0.8vw;  
+}
+
+.hero p {
+  font-size: 1.9vw;     
+}
+
+.search-filter {
+  padding: 2vw;        
+  text-align: center;
+}
+
+#searchInput {
+  padding: 1.28vw;      
+  width: 60%;
+  border-radius: 1.28vw; 
+  border: 1px solid #ccc;
+  margin-bottom: 1.6vw;  
+}
+
+.category-tabs .tab {
+  padding: 0.96vw 1.92vw;   
+  margin: 0.48vw;           
+  border: none;
+  border-radius: 0.96vw;    
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.category-tabs .tab.active {
+  background: #1a73e8;
+  color: white;
+  font-weight: bold;
+}
+
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3.2vw;          
+  gap: 3.2vw;
+}
+
+.course-card {
+  background: white;
+  width: 23vw;
+  border-radius: 1.92vw;   
+  overflow: hidden;
+  box-shadow: 0 0.64vw 1.92vw rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-0.8vw);  
+}
+
+.course-card img {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 1.6vw;        
+}
+
+.course-info h3 {
+  font-size: 1.92vw;       
+  margin-bottom: 0.8vw;    
+}
+
+.course-info p {
+  font-size: 1.52vw;      
+  margin-bottom: 1.6vw;    
+  color: #666;
+}
+
+.view-btn {
+  display: inline-block;
+  padding: 0.96vw 1.6vw;   
+  background: #1a73e8;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.96vw;   
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background: #0c57c0;
+}
+
+@media (max-width: 768px) {
+  #searchInput {
+    width: 90%;
+  }
+  .course-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .course-card {
+    width: 90%;
+  }
+}

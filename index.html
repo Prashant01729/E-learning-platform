@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Learning Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="logo">E-Learning Platform</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <button id="dark-toggle">🌓</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Upgrade Your Skills</h2>
+      <p>Explore top-rated online courses curated for you.</p>
+    </div>
+  </section>
+
+  <section class="search-filter">
+    <input type="text" id="searchInput" placeholder="Search courses...">
+    <div class="category-tabs">
+      <button class="tab active" data-category="all">All</button>
+      <button class="tab" data-category="web">Web Dev</button>
+      <button class="tab" data-category="ai">AI</button>
+    </div>
+  </section>
+
+  <section id="course-list" class="course-grid">
+    <div class="course-card" data-category="web">
+      <img src="https://i.pinimg.com/736x/1f/b1/72/1fb17290b7cbc59aa28ec32d308f15b8.jpg" alt="Web Dev" />
+      <div class="course-info">
+        <h3>Full Stack Web Development</h3>
+        <p>Build websites using HTML, CSS, JS, and more.</p>
+        <a href="course.html?course=webdev" class="view-btn">View Course</a>
+      </div>
+    </div>
+    <div class="course-card" data-category="ai">
+      <img src="https://i.ytimg.com/vi/CJFt-2mP1bE/sddefault.jpg" alt="AI" />
+      <div class="course-info">
+        <h3>Introduction to AI</h3>
+        <p>Learn the basics of Artificial Intelligence.</p>
+        <a  href="course.html?course=ai" class="view-btn">View Course</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
